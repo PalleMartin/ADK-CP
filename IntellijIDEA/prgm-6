@@ -1,0 +1,53 @@
+fun main(){
+    var numb_array=arrayOf(1,2,3,4,5,6)
+    println(numb_array.size)
+    println(numb_array.contentToString())
+    numb_array.forEach{print("$it ")}
+    println()
+    numb_array[4]=10
+    numb_array.forEach{print("$it ")}
+    println()
+    var list_variable = mutableListOf("a","b","10")
+    list_variable[2]="c"
+    list_variable.forEach { print("$it ")}
+    println()
+    list_variable.add("b")
+    list_variable.forEach { print("$it ")}
+    println()
+    list_variable.add(index=3,element="4")
+    list_variable.forEach { print("$it ")}
+    println()
+    list_variable.removeAt(index=1)
+    list_variable.forEach { print("$it ")}
+    println()
+    list_variable.clear()
+    println(list_variable.size)
+//MAPS
+    val immutable_map=mapOf(1 to "one",2 to "two",3 to "three")
+    println(immutable_map)
+    immutable_map.forEach { print("$it ")}
+    println()
+    immutable_map.forEach { k, v -> print("$k $v ")
+        println()
+    }
+    val key_list=immutable_map.keys
+    println(key_list)
+
+    key_list.forEach{print("$it ->${immutable_map[it]}")}
+    var mutable_map1=mutableMapOf(1 to "one",2 to
+            "two",3 to "three")
+    println()
+    mutable_map1.forEach { k, v ->print("$k $v ")}
+    println()
+    mutable_map1.put(4, "four")
+    mutable_map1.forEach { k, v -> print("$k $v ")}
+    println()
+    mutable_map1[6]="six"
+    mutable_map1.forEach { k, v -> print("$k $v ")}
+    println()
+    var mutable_map2=mutableMapOf(1 to "ten", 12 to "nine", 13 to "three")
+    val mm3=mutable_map1+mutable_map2
+    println(mm3)
+
+
+}
