@@ -1,0 +1,20 @@
+class Person(var name:String,var age:Int){ //PRIMARY CONSTRUCTOR
+    /*var name:String="Alex" var age:Int=21*/
+    var sal:Double=0.0
+    constructor(name:String) : this (name,age=0){
+    }
+    constructor(name:String, age:Int, sal:Double):this(name,age){
+        this.sal = sal
+    }
+    fun getPersonData():String{
+        return "$name is $age years old and earns $sal"
+    }
+}
+fun main(args:Array<String>){
+//val person = Person(name="Some Name",age=40, sal=24508.00)
+    val person = Person(name="Some Name", age=30, sal=20508.00)
+    person.name = "Some Name" //SETNAME println(person.name)
+    println(person.age)
+    println(person.getPersonData())
+}
+data class PersonData(val name:String,val age:Int,var sal:Double) //DATA CLASS
