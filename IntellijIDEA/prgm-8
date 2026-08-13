@@ -1,0 +1,21 @@
+fun main(){
+    var a: String?=null
+    val length:Int=if (a != null)a.length else 2
+//THE ABOVE STATEMENT IS EQUIVALENT TO
+    val length2=a?.length ?: 2 //ELVIS OPERATOR println("length=$length, length=$length2") val length1=a.toString().length println(length1)
+    val a_int=a?.toIntOrNull()
+    println(a_int)
+//LET FUNCTION
+    a?.let{println("Let function ${it.length}")}
+    a="1234"
+    a?.let{println("Let function ${it}")}
+//TRY CATCH (EXCEPTION)
+    a="s23"
+    try{
+        val a_dbl=a!!.toDouble()
+        println(a_dbl)
+    }catch (e:Exception){
+        println(e.toString())
+//e.printStackTrace()
+    }
+}
