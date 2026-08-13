@@ -1,0 +1,17 @@
+fun main() {
+    val radius = 10
+
+    for (i in -radius..radius) {
+        for (j in -radius..radius) {
+            val distance = i * i + j * j
+
+            if (distance >= radius * radius - radius &&
+                distance <= radius * radius + radius) {
+                print("* ")
+            } else {
+                print("  ")
+            }
+        }
+        println()
+    }
+}
