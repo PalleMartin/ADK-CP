@@ -1,0 +1,13 @@
+fun main(){
+    print("Enter the name:")
+    val name = readLine()!!.toString()
+    person(name)
+    print("Enter your age:")
+    val age = readLine()!!.toInt()
+    print("Enter occupation:")
+    val occupation = readLine()!!.toString()
+    person(name,occupation=occupation,age=age)
+}
+fun person(name: String, age:Int=20, occupation: String="Student"){
+    println("Name: $name | Age: $age | Occupation:$occupation")
+}
