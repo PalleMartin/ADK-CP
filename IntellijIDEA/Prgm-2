@@ -1,0 +1,14 @@
+fun main() {
+    print("Enter the limit: ")
+    val n = readLine()!!.toInt()
+    var first = 0
+    var second = 1
+    var count = 0
+    while (count < n) {
+        print("$first ")
+        val next = first + second
+        first = second
+                second = next
+        count++
+    }
+}
