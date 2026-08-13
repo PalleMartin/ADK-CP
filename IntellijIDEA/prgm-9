@@ -1,0 +1,12 @@
+fun main(){
+    print("Enter a Sentence:")
+    val str = readLine()!!
+    val tokens = str.split(Regex("[ ,.]"))
+    println("Tokens are:")
+    var count = 1
+    for (token in tokens) {
+        if (token.isNotBlank()) { println("$count. ${token.trim()}")
+            count++
+        }
+    }
+}
