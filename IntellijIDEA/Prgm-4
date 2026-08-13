@@ -1,0 +1,23 @@
+fun main(){
+    val str_variable="hello world"
+    println("str_variable class is ${str_variable.javaClass.name}")
+
+    for(str in str_variable){ print("$str ")
+    }
+    println()
+    for(i in 0..str_variable.length-1){
+        print("${str_variable[i]} ")
+    }
+    println()
+    str_variable.forEach {
+        print("$it ") }
+    println()
+    println(str_variable)
+    println(str_variable.length)
+    println(str_variable.reversed())
+    println(str_variable.lowercase())
+    println(str_variable.uppercase())
+    val str2=" I am Sarkaar"
+    val str3=str_variable+str2
+    println(str3)
+}
